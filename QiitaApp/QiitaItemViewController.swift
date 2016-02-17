@@ -27,6 +27,10 @@ class QiitaItemViewController: UIViewController {
     }
     
     @IBAction func save(sender: UIBarButtonItem) {
+        let newPress: QiitaItems = QiitaItems.MR_createEntity()!
+        newPress.item = qiitaField.text
+        newPress.managedObjectContext!.MR_saveToPersistentStoreAndWait()
+        
         navigationController!.popViewControllerAnimated(true)
     }
 

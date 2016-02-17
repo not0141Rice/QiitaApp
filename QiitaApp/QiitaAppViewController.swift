@@ -13,6 +13,12 @@ class QiitaAppViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     var qiitaEntities: [QiitaItems]!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        qiitaEntities = QiitaItems.MR_findAll() as? [QiitaItems]
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         qiitaEntities = QiitaItems.MR_findAll() as? [QiitaItems]
