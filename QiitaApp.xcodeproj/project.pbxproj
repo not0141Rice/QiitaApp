@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QiitaApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		2D97AEE21C749C4F0065C26C /* QiitaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97AEE51C749C4F0065C26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D97AEE71C749C4F0065C26C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 				2D97AEF11C749C4F0065C26C /* LaunchScreen.storyboard */,
 				2D97AEF41C749C4F0065C26C /* Info.plist */,
 				2D97AEEC1C749C4F0065C26C /* QiitaApp.xcdatamodeld */,
+				2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */,
 			);
 			path = QiitaApp;
 			sourceTree = "<group>";
@@ -481,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0141Rice.QiitaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/0141rice/workspace/QiitaApp/QiitaApp/QiitaApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -493,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0141Rice.QiitaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/0141rice/workspace/QiitaApp/QiitaApp/QiitaApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
