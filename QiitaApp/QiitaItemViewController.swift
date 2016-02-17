@@ -10,6 +10,7 @@ import UIKit
 
 class QiitaItemViewController: UIViewController {
 
+    @IBOutlet weak var qiitaField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 

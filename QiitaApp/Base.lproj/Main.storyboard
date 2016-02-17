@@ -94,6 +94,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="qiitaField" destination="n6h-q4-LAd" id="W8A-OG-HjX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tu-SC-ILh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
