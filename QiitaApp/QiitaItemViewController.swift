@@ -11,8 +11,13 @@ import UIKit
 class QiitaItemViewController: UIViewController {
 
     @IBOutlet weak var qiitaField: UITextField!
+    var press: QiitaItems? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let pressQiita = press {
+            qiitaField.text = pressQiita.item
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -27,9 +32,14 @@ class QiitaItemViewController: UIViewController {
     }
     
     @IBAction func save(sender: UIBarButtonItem) {
-        let newPress: QiitaItems = QiitaItems.MR_createEntity()!
-        newPress.item = qiitaField.text
-        newPress.managedObjectContext!.MR_saveToPersistentStoreAndWait()
+        if press != nil {
+            press?.item = qiitaField.text
+            press?.managedObjectContext!.MR_saveToPersistentStoreAndWait()
+        } else {
+            let newPress: QiitaItems = QiitaItems.MR_createEntity()!
+            newPress.item = qiitaField.text
+            newPress.managedObjectContext!.MR_saveToPersistentStoreAndWait()
+        }
         
         navigationController!.popViewControllerAnimated(true)
     }

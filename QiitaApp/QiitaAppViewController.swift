@@ -29,6 +29,22 @@ class QiitaAppViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "edit" {
+            let qiitaController = segue.destinationViewController as! QiitaItemViewController
+            let press = qiitaEntities[tableView.indexPathsForSelectedRows!.first!.row]
+            qiitaController.press = press
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            qiitaEntities.removeAtIndex(indexPath.row).MR_deleteEntity()
+            NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+            tableView.reloadData()
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
         return qiitaEntities.count
     }
@@ -37,6 +53,10 @@ class QiitaAppViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("ListItem")!
         cell.textLabel!.text = qiitaEntities[indexPath.row].item
         return cell
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.reloadData()
     }
 
 

@@ -28,6 +28,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VHm-E5-D42" kind="show" identifier="edit" id="wgm-ta-nia"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -125,4 +128,7 @@
             <point key="canvasLocation" x="308" y="372"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wgm-ta-nia"/>
+    </inferredMetricsTieBreakers>
 </document>
