@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D41E8471C74C5B0009FA16A /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */; };
+		2D41E8491C74CCA3009FA16A /* QiitaItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41E8481C74CCA3009FA16A /* QiitaItemViewController.swift */; };
 		2D97AEE61C749C4F0065C26C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEE51C749C4F0065C26C /* AppDelegate.swift */; };
 		2D97AEE81C749C4F0065C26C /* QiitaAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEE71C749C4F0065C26C /* QiitaAppViewController.swift */; };
 		2D97AEEB1C749C4F0065C26C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D97AEE91C749C4F0065C26C /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QiitaApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		2D41E8481C74CCA3009FA16A /* QiitaItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaItemViewController.swift; sourceTree = "<group>"; };
 		2D97AEE21C749C4F0065C26C /* QiitaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97AEE51C749C4F0065C26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D97AEE71C749C4F0065C26C /* QiitaAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAppViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				2D97AEEC1C749C4F0065C26C /* QiitaApp.xcdatamodeld */,
 				2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */,
 				2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */,
+				2D41E8481C74CCA3009FA16A /* QiitaItemViewController.swift */,
 			);
 			path = QiitaApp;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D41E8471C74C5B0009FA16A /* ListItemTableViewCell.swift in Sources */,
+				2D41E8491C74CCA3009FA16A /* QiitaItemViewController.swift in Sources */,
 				2D97AEE81C749C4F0065C26C /* QiitaAppViewController.swift in Sources */,
 				2D97AEE61C749C4F0065C26C /* AppDelegate.swift in Sources */,
 				2D97AEEE1C749C4F0065C26C /* QiitaApp.xcdatamodeld in Sources */,

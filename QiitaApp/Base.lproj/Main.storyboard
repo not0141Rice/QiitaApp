@@ -58,7 +58,7 @@
         <!--Qiita Item-->
         <scene sceneID="2wh-Pf-TCj">
             <objects>
-                <viewController id="VHm-E5-D42" sceneMemberID="viewController">
+                <viewController id="VHm-E5-D42" customClass="QiitaItemViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9od-iD-mCU"/>
                         <viewControllerLayoutGuide type="bottom" id="bH8-UC-hwD"/>
@@ -83,8 +83,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Qiita Item" id="Pzy-en-3xf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uag-Af-jgB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uCl-N1-RER"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uag-Af-jgB">
+                            <connections>
+                                <action selector="cancel:" destination="VHm-E5-D42" id="zgn-ai-vdE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uCl-N1-RER">
+                            <connections>
+                                <action selector="save:" destination="VHm-E5-D42" id="DiT-wn-FeQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tu-SC-ILh" userLabel="First Responder" sceneMemberID="firstResponder"/>
