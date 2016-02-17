@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xxg-AG-Geh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Qiita App View Controller-->
+        <!--Qiita List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="QiitaAppViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDX-g4-NkK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDX-g4-NkK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListItem" id="orC-kF-Xhy" customClass="ListItemTableViewCell" customModule="QiitaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="orC-kF-Xhy" id="L04-yg-K2D">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -33,9 +33,79 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rDX-g4-NkK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CHL-ci-B3K"/>
+                            <constraint firstItem="rDX-g4-NkK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IRJ-GN-RMr"/>
+                            <constraint firstItem="rDX-g4-NkK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ccD-oK-aZE"/>
+                            <constraint firstAttribute="trailing" secondItem="rDX-g4-NkK" secondAttribute="trailing" id="p2n-pi-Hyg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Qiita List" id="pIT-4D-BEp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KGJ-8X-hWP">
+                            <connections>
+                                <segue destination="VHm-E5-D42" kind="show" id="Asj-9r-S4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="rDX-g4-NkK" id="NAi-7E-YRT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="372"/>
+        </scene>
+        <!--Qiita Item-->
+        <scene sceneID="2wh-Pf-TCj">
+            <objects>
+                <viewController id="VHm-E5-D42" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9od-iD-mCU"/>
+                        <viewControllerLayoutGuide type="bottom" id="bH8-UC-hwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZf-LL-twe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-q4-LAd">
+                                <rect key="frame" x="136" y="112" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="LUe-Oa-L63"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n6h-q4-LAd" firstAttribute="centerX" secondItem="AZf-LL-twe" secondAttribute="centerX" id="5Cl-cb-6nr"/>
+                            <constraint firstItem="n6h-q4-LAd" firstAttribute="top" secondItem="9od-iD-mCU" secondAttribute="bottom" constant="48" id="YoK-4c-gGl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Qiita Item" id="Pzy-en-3xf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uag-Af-jgB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uCl-N1-RER"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tu-SC-ILh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EQY-M5-7Ox">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xxg-AG-Geh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qkP-Pk-zYW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H4t-Rv-Srf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ag-xd-IGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="308" y="372"/>
         </scene>
