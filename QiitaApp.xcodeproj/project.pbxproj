@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D41E8471C74C5B0009FA16A /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */; };
 		2D97AEE61C749C4F0065C26C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEE51C749C4F0065C26C /* AppDelegate.swift */; };
-		2D97AEE81C749C4F0065C26C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEE71C749C4F0065C26C /* ViewController.swift */; };
+		2D97AEE81C749C4F0065C26C /* QiitaAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEE71C749C4F0065C26C /* QiitaAppViewController.swift */; };
 		2D97AEEB1C749C4F0065C26C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D97AEE91C749C4F0065C26C /* Main.storyboard */; };
 		2D97AEEE1C749C4F0065C26C /* QiitaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AEEC1C749C4F0065C26C /* QiitaApp.xcdatamodeld */; };
 		2D97AEF01C749C4F0065C26C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D97AEEF1C749C4F0065C26C /* Assets.xcassets */; };
@@ -37,9 +38,10 @@
 
 /* Begin PBXFileReference section */
 		2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QiitaApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 		2D97AEE21C749C4F0065C26C /* QiitaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97AEE51C749C4F0065C26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D97AEE71C749C4F0065C26C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D97AEE71C749C4F0065C26C /* QiitaAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAppViewController.swift; sourceTree = "<group>"; };
 		2D97AEEA1C749C4F0065C26C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D97AEED1C749C4F0065C26C /* QiitaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QiitaApp.xcdatamodel; sourceTree = "<group>"; };
 		2D97AEEF1C749C4F0065C26C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,13 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				2D97AEE51C749C4F0065C26C /* AppDelegate.swift */,
-				2D97AEE71C749C4F0065C26C /* ViewController.swift */,
+				2D97AEE71C749C4F0065C26C /* QiitaAppViewController.swift */,
 				2D97AEE91C749C4F0065C26C /* Main.storyboard */,
 				2D97AEEF1C749C4F0065C26C /* Assets.xcassets */,
 				2D97AEF11C749C4F0065C26C /* LaunchScreen.storyboard */,
 				2D97AEF41C749C4F0065C26C /* Info.plist */,
 				2D97AEEC1C749C4F0065C26C /* QiitaApp.xcdatamodeld */,
 				2D41E8291C749DE1009FA16A /* QiitaApp-Bridging-Header.h */,
+				2D41E8461C74C5B0009FA16A /* ListItemTableViewCell.swift */,
 			);
 			path = QiitaApp;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				TargetAttributes = {
 					2D97AEE11C749C4F0065C26C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = HE479QX7QL;
 					};
 					2D97AEF81C749C4F0065C26C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -336,7 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D97AEE81C749C4F0065C26C /* ViewController.swift in Sources */,
+				2D41E8471C74C5B0009FA16A /* ListItemTableViewCell.swift in Sources */,
+				2D97AEE81C749C4F0065C26C /* QiitaAppViewController.swift in Sources */,
 				2D97AEE61C749C4F0065C26C /* AppDelegate.swift in Sources */,
 				2D97AEEE1C749C4F0065C26C /* QiitaApp.xcdatamodeld in Sources */,
 			);
@@ -479,10 +484,13 @@
 			baseConfigurationReference = C6E726A99EB781CD953487F1 /* Pods-QiitaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QiitaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0141Rice.QiitaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/0141rice/workspace/QiitaApp/QiitaApp/QiitaApp-Bridging-Header.h";
 			};
 			name = Debug;
@@ -492,10 +500,13 @@
 			baseConfigurationReference = 42C8B6FF11D0795359CFDCDA /* Pods-QiitaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QiitaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0141Rice.QiitaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/0141rice/workspace/QiitaApp/QiitaApp/QiitaApp-Bridging-Header.h";
 			};
 			name = Release;
